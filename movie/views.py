@@ -14,7 +14,7 @@ class MovieListView(ListAPIView):
     filter_backends = [SearchFilter, DjangoFilterBackend, OrderingFilter]
     search_fields = ['title']
     filterset_fields = ['genre']
-    ordering = ['-release_data']
+    ordering = ['-release_date']
 
 
 class MovieDetailView(RetrieveAPIView):
